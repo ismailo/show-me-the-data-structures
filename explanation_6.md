@@ -17,7 +17,7 @@ O(m + n) — the two sets and the result linked list each hold at most m + n uni
 
 ### Reasoning Behind Decisions:
 
-Each linked list is converted to a set first. Python's & operator then finds common elements between both sets in one step. This avoids a nested loop, which would require checking every element of list 1 against every element of list 2. Sorted output keeps the result consistent.
+Each linked list is converted to a set first, so that membership testing costs O(1) instead of O(n). Python's & operator then finds common elements between both sets in one step, replacing what would otherwise be a nested loop of O(m×n) comparisons. The output is sorted before building the result linked list because sets have no guaranteed iteration order in Python — without sorting, the same input could produce a different output ordering on different runs, making testing and verification unreliable.
 
 ### Time Efficiency:
 
