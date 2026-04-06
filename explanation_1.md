@@ -5,7 +5,7 @@ An OrderedDict was chosen because it natively combines a hash map with a doubly-
 
 ## Time Efficiency:
 
-get(): O(1) — hash map lookup + move_to_end() (pointer manipulation, not a scan).
+get(): O(1) - hash map lookup + move_to_end() (pointer manipulation, not a scan).
 set(): O(1) — hash map insert/update + move_to_end() + optional popitem() (all pointer operations).
 Both operations meet the O(1) requirement stated in the problem.
 
